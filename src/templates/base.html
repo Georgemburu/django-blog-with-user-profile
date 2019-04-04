@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog: {% if title %} {{title}} {% endif %}</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="{% static 'css/post.css'%}">
+</head>
+
+<body>
+  {% include 'inc/navbar.html' %}
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

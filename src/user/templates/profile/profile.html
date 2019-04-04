@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <div>
+            Profile
+        </div>
+        <div>
+            <img src={{ user.userprofile.image.url }} alt="profile image" class="profile_image"/>
+            <div>
+                Name: {{ user.first_name }} {{ user.last_name }}
+                <div>
+                    <div>
+                        Username: {{ user.username }}
+                   </div>
+                   <div>
+                        Email: {{ user.email }}
+                    </div>
+                </div>
+
+                <div>
+                    <form method="POST" enctype = "multipart/form-data">
+                        {% csrf_token %}
+                        {{ u_form.as_p}}
+                        {{ p_form.as_p}}
+                        <input type="submit" value="Save"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

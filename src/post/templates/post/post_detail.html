@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <div>
+            {{ object.title }}
+        </div>
+        <img src={{ object.image.url }} alt='post image' width="100" />        
+        <div>
+            {{ object.body }}
+        </div>
+    </div>
+    <div>
+        <small> by {{object.author}}</small>
+        <div>
+            <a href={% url 'post_list' %} > Back </a>
+            <a href={% url 'post_edit' object.id %} > Edit </a>
+
+        </div>
+    </div>
+    
+{% endblock%}

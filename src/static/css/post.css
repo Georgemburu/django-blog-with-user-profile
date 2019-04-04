@@ -1,0 +1,20 @@
+.post_list_div {
+    box-shadow: 0px 0px 1px 0px black;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    position: relative;
+    margin-bottom: 5px; 
+}
+.post_list_div img {
+    border-right: 1px solid black;
+}
+.post_list_div > div {
+    padding-left: 4px;
+}
+.post_author_div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px;
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <div>{{ heading }}</div>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" value={{user.id}} name="author"/>
+            <input type="submit" value="Log In"/>
+        </form>
+    </div>
+{% endblock%}
